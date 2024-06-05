@@ -2,141 +2,168 @@
 @import url('https://fonts.googleapis.com/css?family=Khula:700');
 
 .contentContainer{
-  color: white;
-  width: auto;
-  height: auto;
+    height: auto;
+    width: auto;
+    display: flex;
+    margin-top: 5%;
+    color: white;
+    justify-content: space-between;
+}
+.content-right-image{
+  width: 50%;
+  height: 600px;
+  background-image: url("../assets/images/background.avif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.content-description p{
+  font-family:'Courier New', Courier, monospace;
+  font-size: 20px;
+  line-height: 40px;
 }
 .animationWrapper {
   display: flex;
-  height: 100vh;
+  flex-direction: column;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  width: 50%;
   align-items: center;
+  align-content: center;
 }
-.animationContainer{
+.name-container{
   display: flex;
   flex-direction: column;
-  text-align:left;
-  overflow:hidden;
-  height: 100px;
-  padding-left: 10%;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  -webkit-perspective: 1000;
-  perspective: 1000;
-  -webkit-transform: translate3d(0,0,0);
-  transform: translate3d(0, 0, 0);
-  font-family: Centra;
-  font-weight: 300;
-  font-size: 40px; 
-  color: white;    
+  gap: 20px;
+  font-size: 52px;
+  height: auto;
+  margin-left: 10%;
+  width: auto;
 }
-.animationContainer div {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.animationContainer div:first-of-type {
-  animation: showup infinite;
-}
-
-.animationContainer div:last-of-type {
-  width: 400px;
-  animation: reveal infinite;
-}
-
-.animationContainer div:last-of-type span {
-  margin-left: -355px;
-  animation: slidein 5s infinite;
-}
-
-@keyframes showup {
-  0% { opacity: 0; }
-  20% { opacity: 1; }
-  80% { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-@keyframes slidein {
-  0% { margin-left: -800px; }
-  20% { margin-left: -800px; }
-  35% { margin-left: 0px; }
-  100% { margin-left: 0px; }
-}
-
-@keyframes reveal {
-  0% { opacity: 0; width: 0px; }
-  20% { opacity: 1; width: 0px; }
-  30% { width: 355px; }
-  80% { opacity: 1; }
-  100% { opacity: 0; width: 355px; }
-}
-
-/* Content Animation*/
 
 .hidden {
   opacity:0;
 }
+
 .console-container {
-  font-family:Centra;
+  font-family:serif;
   font-size:52px;
-  text-align:center;
-  height:fit-content;
-  width:800px;
+  font-weight: 400;
+  align-items: center;
+  height:auto;
+  width:auto;
   display:flex;
   gap: 20px;
-  position:absolute;
+  position:relative;
   color:white;
-  top: 50%;
-  margin-top: 5%;
-  bottom:0px;
-  left:10%;
-  right:0px;
+  margin-top: 10px;
 }
+
 .console-underscore {
   display:inline-block;
   position:relative;
   top:-0.14em;
   left:10px;
 }
-.content_glass_box{
-  width:28%;
-  height: auto;
-  margin-top: 20%;
-  margin-left: 25%;
-  padding: 3%;
+.button_div{
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+  gap: 30px;
+  
+}
+.resume-button{
+  width: 200px;
+  text-align: center;
+  align-content: center;
   backdrop-filter: blur(20px) saturate(75%);
   -webkit-backdrop-filter: blur(20px) saturate(75%);
   background-color: #a3a3a32b;
   border: 1px solid rgba(255, 255, 255, .288);
-  border-radius: 20px;
-  transition:.5s ease-in-out;
+  border-radius: 10px;
 }
-.content_glass_box h2{
-  font-family: Centra;
-  text-align: center;
+.linkedin-git-mail-button{
+  width: 200px;
+  backdrop-filter: blur(20px) saturate(75%);
+  -webkit-backdrop-filter: blur(20px) saturate(75%);
+  background-color: #a3a3a32b;
+  border: 1px solid rgba(255, 255, 255, .288);
+  border-radius: 10px;
 }
-.content_glass_box p{
-  font-family: Centra;
-  line-height: 30px;
+
+.linkedin-git-mail-div{
+  display: flex;
+  justify-content: center;
 }
-.content_glass_box button{
-  width: 150px;
-  height: 40px;
+
+.linkedin-git-mail-div a {
+  display: inline-block;
+  margin: 10px; /* Adjust spacing between icons */
+  transition: transform 0.3s ease; /* Add a smooth transition for the transform property */
+}
+
+.linkedin-git-mail-div a:hover,
+.linkedin-git-mail-div a:focus {
+  color: black;
+  transform: translateY(-0.25em);
+  text-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: scale(1.2);
+}
+
+.resume-button a{
   display: flex;
   justify-content: center;
   gap: 20px;
-  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.resume-button a:hover,
+.resume-button a:focus {
   color: white;
-  overflow: hidden;
-  border-radius: 20px;
-  backdrop-filter: blur(20px) saturate(75%);
-  -webkit-backdrop-filter: blur(20px) saturate(75%);
-  background-color: #244a002b;
-  border: 1px solid rgba(255, 255, 255, .288);
+  transform: translateY(-0.25em);
+  text-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: scale(1.2);
 }
-.button_div{
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 20px;
+
+@media (max-width: 768px) {
+  .resume-button{
+    height: 50px;
+  }
+  .button_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 500px;
+    gap: 30px;
 }
+.console-underscore{
+  visibility: hidden;
+}
+.console-container{
+  width: 200px;
+  height: 200px;
+}
+} 
+@media (max-width: 480px) {
+  .resume-button{
+    height: 50px;
+  }
+  .button_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 500px;
+    gap: 30px;
+}
+.console-underscore{
+  visibility: hidden;
+}
+.console-container{
+  width: 200px;
+  height: 200px;
+}
+} 

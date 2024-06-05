@@ -4,9 +4,9 @@ import logo from '../assets/images/logo_white-removebg-preview.png';
 import navIcon1 from '../assets/images/nav-icon1.svg';
 import navIcon2 from '../assets/images/nav-icon2.svg'
 import navIcon3 from '../assets/images/nav-icon3.svg'
-import { BrowserRouter as Router} from 'react-router-dom';
 import {HashLink} from 'react-router-hash-link'
 import '../styles/navbar.css'
+import { Link } from "react-router-dom";
 
 export const NavBar = () => {
   const hamburgerRef = useRef<HTMLDivElement>(null);
@@ -43,7 +43,6 @@ export const NavBar = () => {
   }, []);
 
   return (
-    <Router>
       <Navbar className="navbarcontainer">
       <div className="logo display: flex;align-items: center;">
          <img src={logo} alt="image"></img>
@@ -56,24 +55,24 @@ export const NavBar = () => {
         </div>
         <div className="nav-links-div">
         <ul className="nav-links" ref={navLinksRef}>
-            <li><a href="https://www.web-leb.com/code">Home</a></li>
-            <li><a href="https://www.web-leb.com/code">About me</a></li>
-            <li><a href="https://www.web-leb.com/code">Skills</a></li>
-            <li><a href="https://www.web-leb.com/code">Works</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to ="/about">About me</Link></li>
+            <li><Link to ="/skills">Skills</Link></li>
+            <li><Link to="/projects">Works</Link></li>
             <li> <div className="navbar-text-div" ref={contactsRef} >
               <span className="navbar-text">
               <div className="social-icon">
-                <a href="#">
+                <a href="https://www.linkedin.com/in/sanjai-samson" target="_blank">
                   <img src={navIcon1} alt="" />
                 </a>
-                <a href="#">
+                <a href="https://www.facebook.com/sanjai.samson.73?mibextid=ZbWKwL" target="_blank">
                   <img src={navIcon2} alt="" />
                 </a>
-                <a href="#">
+                <a href="https://www.instagram.com/sanjai__samson?igsh=YmtzNGpueXdvd2Fz" target="_blank">
                   <img src={navIcon3} alt="" />
                 </a>
               </div>
-              <HashLink to="#connect">
+              <HashLink to="/footer">
                 <button className="vvd">
                   <span>Let’s Connect</span>
                 </button>
@@ -84,12 +83,5 @@ export const NavBar = () => {
         </div>
         </Container>
         </Navbar>
-        {/* <div className="buttoncontainer">
-      <button className="button" data-text="Awesome">
-        <span className="actual-text"> Hello Dude </span>
-        <span aria-hidden="true" className="hover-text"> Hello Dude </span>
-    </button> 
-  </div> */}
-    </Router>
   )
 }

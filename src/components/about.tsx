@@ -1,6 +1,12 @@
 import '../styles/about.css'
+import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export const About = () =>{
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []); 
 
     const revealElement = document.querySelector('.reveal') as HTMLElement;
 
@@ -33,7 +39,9 @@ export const About = () =>{
                         Driven by a relentless pursuit of excellence, I continuously seek to expand my knowledge and stay at the forefront of emerging trends, ensuring that my work not only meets but exceeds the highest industry standards.
                         </p>
                         <div className='button-div'>
-                    <button><a href="#">View My Work</a></button>
+                  <Link to="/projects">
+                  <button className="buttons"><span>View Projects</span></button>
+                  </Link>
                     </div>
                 </section>
                 </div>

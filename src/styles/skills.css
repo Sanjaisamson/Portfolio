@@ -6,16 +6,8 @@
   color: white;
 }
 .skills_glass_box{
-  backdrop-filter: blur(20px) saturate(75%);
-  -webkit-backdrop-filter: blur(20px) saturate(75%);
-  background-color: #a3a3a32b;
-  border: 1px solid rgba(255, 255, 255, .288);
-  border-radius: 20px;
-  width: 70%;
-  margin-left: 30%;
-}
-.skills_glass_box h2{
-  text-align: center;
+  background: transparent;
+  width: auto;
 }
 .skills_glass_box_cards{
   width:auto;
@@ -23,7 +15,6 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   height: auto;
-  padding: 20px;
   background: transparent;
   border-radius: 20px;
   transition:.5s ease-in-out;
@@ -42,7 +33,7 @@
   width:250px;
   backdrop-filter: blur(20px) saturate(75%);
   -webkit-backdrop-filter: blur(20px) saturate(75%);
-  background-color: #a3a3a32b;
+  background-color: #1046032b;
   border: 1px solid rgba(255, 255, 255, .288);
   border-radius: 20px;
   display: flex;
@@ -85,11 +76,11 @@
   position:absolute;
   top:0;
   left:0;
+  padding-top: 20px;
   width:100%;
   height:100%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  overflow: hidden;
+  justify-content: center;
   border-radius:50%;
 }
 .progress-chart-percent .progress-chart-num h2

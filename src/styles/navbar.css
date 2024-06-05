@@ -4,11 +4,11 @@
     -webkit-backdrop-filter: blur(20px) saturate(75%);
     background-color: #a3a3a32b;
     border: 1px solid rgba(255, 255, 255, .288);
+    border-left: 0px;
     transition: transform .5s ease-in-out;
-    position: fixed;
     width: 100%;
-    top: 0;
     z-index: 9999;
+    top: 0;
     gap: 100px;
     transition:  0.32s ease-in-out;
 }
@@ -27,7 +27,7 @@ nav{
     /* box-shadow: 0 3px 20px white; */
     display: flex;
     position: fixed;
-    z-index: 10;
+
  }
  /*Styling logo*/
  .logo{
@@ -47,11 +47,13 @@ nav{
  }
  .nav-links-div{
     background-color: transparent;
+    align-items: center;
+    margin-top: 10px;
  }
  .navbar-text-div{
     background-color: transparent;
     height: fit-content;
-    width: 500px;
+    width: auto;
  }
  /*Styling Links*/
  .nav-links-div ul {
@@ -61,7 +63,7 @@ nav{
  .nav-links{
     display: flex;
     list-style: none; 
-    width: 70vw;
+    width: auto;
     padding: 0 0.7vw;
     gap: 50px;
     justify-content: space-evenly;
@@ -74,7 +76,8 @@ nav{
     margin: 0 0.7vw;
  }
  .nav-links li a:hover {
-    color: black;
+    color: red;
+    font-weight: 600;
  }
  .nav-links li {
     position: relative;

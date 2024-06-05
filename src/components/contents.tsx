@@ -1,10 +1,10 @@
 import {useEffect, useRef} from 'react'
-import { BrowserRouter as Router} from 'react-router-dom';
 import '../styles/contents.css'
 import { DownloadIcon, GithubIcon, LucideLinkedin, MailCheckIcon } from 'lucide-react';
 
 
 function consoleText(words:any, id:any) {
+  
   const target = document.getElementById(id);
 
   if (!target) return; 
@@ -32,40 +32,79 @@ export const Content = () => {
   const consoleRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const words = ['Web Developer', 'Software Engineer'];
 
-    const intervalId = consoleText(words, 'text'); // Call consoleText with parameters
+    const intervalId = consoleText(words, 'text'); 
 
     return () => {
-      clearInterval(intervalId); // Cleanup interval on component unmount
+      clearInterval(intervalId); 
     };
   }, []);
  
   return (
-    <Router>
       <div className="contentContainer">
         <div className="animationWrapper">
-          <div className="animationContainer">
-            <div>Hi,</div>
-            <div>
+          <div className='name-container'>
+          <div>Hi,</div>
+          <div>
               <span>I am Sanjai Samson</span>
-              </div>
           </div>
           <div className='console-container'>
             <span id='text' ref={consoleRef}></span>
             <div className='console-underscore' id='console'>&#95;</div>
           </div>
-          <div className='content_glass_box'>
+          <div className='content-description'>
+          <p>Hello, I'm a web developer and a software Engineer, specializing in creating modern and responsive websites and Applications.</p>
+          </div>
+          </div>
+          <div>
+          <div className='button_div'>
+            <div className='resume-button'>
+              <a>Resume 
+              <DownloadIcon height='20px'/>
+              </a>
+              </div>
+              <div className='linkedin-git-mail-button'>
+                <div className='linkedin-git-mail-div'>
+                  <a href="https://www.linkedin.com/in/sanjai-samson" target="_blank" rel="noopener noreferrer">
+                    <LucideLinkedin className='linkedin-icon' color='white' />
+                  </a>
+                  <a href="https://github.com/Sanjaisamson" target="_blank" rel="noopener noreferrer">
+                    <GithubIcon className='github-icon' color='white' />
+                  </a>
+                  <a href="mailto:sanjaisamson3225@gmail.com" target="_blank" rel="noopener noreferrer">
+                    <MailCheckIcon className='mail-icon' color='white' />
+                  </a>
+                </div>
+              </div>
+          </div>
+          </div>
+          {/* <div className='content_glass_box'>
           <h2>Welcome to My Portfolio</h2>
           <p>Hello, I'm a web developer and a software Engineer specializing in creating modern and responsive websites and Applications.</p>
           <h3>If you are intrested Let's work together</h3>
           <div className='button_div'>
-          <button>Resume <DownloadIcon height='20px'/></button>
-          <button><LucideLinkedin/> <GithubIcon/> <MailCheckIcon/> </button>
+              <button>Resume <DownloadIcon height='20px'/></button>
+              <button>
+                <div className='linkedin-git-mail-div'>
+                  <a href="https://www.linkedin.com/in/sanjai-samson" target="_blank" rel="noopener noreferrer">
+                    <LucideLinkedin className='linkedin-icon' color='white' />
+                  </a>
+                  <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">
+                    <GithubIcon className='github-icon' color='white' />
+                  </a>
+                  <a href="mailto:your-email@example.com">
+                    <MailCheckIcon className='mail-icon' color='white' />
+                  </a>
+                </div>
+              </button>
           </div>
-          </div>
+          </div> */}
+        </div>
+        <div className='content-right-image'>
+
         </div>
       </div>
-    </Router>
   )
 }
