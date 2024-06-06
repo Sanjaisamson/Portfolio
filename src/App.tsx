@@ -5,12 +5,27 @@ import { About } from './components/about'
 import { Projects } from './components/projects'
 import { ContactForm } from './components/contactForm';
 import './App.css'
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <BrowserRouter>
-     
+    <HashRouter>
+         <div className="App">
+        <div className="area" >
+          <ul className="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div >
+        <div className='pages'>
           <Routes>
             <Route path="/" element={<>
               <NavBar />
@@ -37,8 +52,10 @@ function App() {
               <ContactForm/>
             </>} />
           </Routes>
-  
-    </BrowserRouter>
+          </div>
+          </div>
+    </HashRouter>
+    
   )
 }
 
