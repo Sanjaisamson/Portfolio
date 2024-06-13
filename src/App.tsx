@@ -11,20 +11,6 @@ function App() {
   return (
     <HashRouter>
          <div className="App">
-        <div className="area" >
-          <ul className="circles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </div >
         <div className='pages'>
           <Routes>
             <Route path="/" element={<>
