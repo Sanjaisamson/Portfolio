@@ -10,10 +10,14 @@ import react_native_logo from '../assets/images/react-native-logo.svg'
 import typescript_logo from '../assets/images/typescript.svg'
 import git_logo from '../assets/images/Git_icon.svg.png'
 
+import reactGA from 'react-ga4'
+
 export const Skills = () =>{
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    reactGA.initialize('G-7D596E71M9')
+      reactGA.send('pageview')
   }, []);
 
   const projectCardData = [
