@@ -18,8 +18,16 @@ export const Skills = () =>{
     window.scrollTo(0, 0);
     reactGA.initialize('G-7D596E71M9')
       reactGA.send('pageview')
+      reactGA.event({
+        category:'user',
+        action:'skills clicked'
+      })
   }, []);
 
+  reactGA.event({
+    category:'user',
+    action:'skills clicked'
+  })
   const projectCardData = [
     {
       name: "HTML",
